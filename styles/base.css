@@ -74,6 +74,7 @@
   .card ul {
     font-family: "Poppins", Helvetica, sans-serif;
     padding: 1rem 2rem;
+    list-style: none;
     
   }
   .card h3 {
