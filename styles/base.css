@@ -29,7 +29,7 @@
   }
   
   nav {
-    background: white;
+    background: rgb(182, 241, 182);
     display:grid;
     padding: 1rem;
     grid-template-columns: auto;
@@ -39,6 +39,7 @@
 
   nav a {
     font-family: "Poppins", Helvetica, sans-serif;
+    color: black;
     text-align: center;
     font-size: 1.5rem;
     padding: 1rem;
@@ -66,8 +67,8 @@
   .card{
     grid-column: 1 /3;
     border-radius: 0.2rem;
-    display: grid;
-    grid-template-columns:auto;
+    display: flex;
+    flex-direction: column;
     gap: 0.5rem;
 
   }
