@@ -14,7 +14,7 @@ header {
   justify-content: center;
   align-items: center;
   column-gap: 0.5rem;
-  padding: 0.5rem 0;
+  padding: 0.5rem;
 }
 
 .logo {
@@ -26,7 +26,7 @@ header {
 h1 {
   color: var(--lightest-color);
   font-family: "Lato";
-  font-size: 4rem;
+  font-size: 3.5rem;
   text-shadow: -1px 1px 0 #000;
 }
 
@@ -45,7 +45,7 @@ nav {
 
 .navigation a:link {
   font-family: "Lato";
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--primary-color);
   text-shadow: -1px 1px 0 #000;
 }
@@ -67,11 +67,15 @@ nav {
 }
 
 nav ul li a {
-  font-family: "Poppins", Helvetica, sans-serif;
-  color: black;
+  font-family: "Lato", Helvetica, sans-serif;
+  color: var(--primary-color);
   text-align: center;
   font-size: 1.5rem;
   padding: 1rem;
+}
+
+.open li {
+  display: block;
 }
 
 main {
