@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&family=Lato&display=swap");
+
+:root {
+  --primary-color: #8fc0a9;
+  --secondary-color: #c8d5b9;
+  --lightest-color: #faf3dd;
+}
+
+header {
+  background: var(--primary-color);
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.5rem;
+  padding: 0.5rem 0;
+}
+
+.logo {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+h1 {
+  color: var(--lightest-color);
+  font-family: "Lato";
+  font-size: 4rem;
+  text-shadow: -1px 1px 0 #000;
+}
+
+nav {
+  width: 100%;
+  background-color: var(--lightest-color);
+}
+
+.navigation {
+  display: flex;
+  flex-flow: column;
+  text-align: left justify;
+  gap: 1rem;
+  list-style-type: none;
+}
+
+.navigation a:link {
+  font-family: "Lato";
+  font-size: 2rem;
+  color: var(--primary-color);
+  text-shadow: -1px 1px 0 #000;
+}
+
+#menu::before {
+  content: "≡";
+  font-size: 3rem;
+  padding: 0.5rem;
+  color: black;
+}
+
+#menu.open::before {
+  font-family: "Lato", Helvetica, sans-serif;
+  content: "X";
+}
+
+.navigation li {
+  display: none;
+}
+
+nav ul li a {
+  font-family: "Poppins", Helvetica, sans-serif;
+  color: black;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+main {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+footer {
+  background: var(--primary-color);
+  padding: 2rem;
+  text-align: left justify;
+  grid-column: 1 / 4;
+  font-family: "Lato", Helvetica, sans-serif;
+}
