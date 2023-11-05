@@ -4,13 +4,15 @@
   --primary-color: #8fc0a9;
   --secondary-color: #c8d5b9;
   --lightest-color: #faf3dd;
+  --dark-text-color: #faf3dd;
+  --dark-background-color: black;
 }
 
 header {
   background: var(--primary-color);
   width: 100%;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr 2fr 1fr;
   justify-content: center;
   align-items: center;
   column-gap: 0.5rem;
@@ -24,6 +26,7 @@ header {
 }
 
 h1 {
+  grid-column: 2;
   color: var(--lightest-color);
   font-family: "Lato";
   font-size: 3.5rem;
@@ -78,6 +81,68 @@ nav ul li a {
   display: block;
 }
 
+.switch {
+  position: relative;
+  display: inline-block;
+  justify-self: end;
+  margin-right: 1rem;
+  width: 60px;
+  height: 34px;
+  grid-column: 3;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: grey;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: grey;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px white;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
 main {
   width: 80%;
   margin: 0 auto;
@@ -94,4 +159,9 @@ footer {
   text-align: left justify;
   grid-column: 1 / 4;
   font-family: "Lato", Helvetica, sans-serif;
+}
+
+.dark {
+  background-color: var(--dark-background-color);
+  color: var(--dark-text-color);
 }
